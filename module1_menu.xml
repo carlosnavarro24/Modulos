@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+    <data>
+  	  	<menuitem id="menu_module1"
+            name="School"
+            sequence="10"/>            
+       <menuitem id="menu_module1_academy"
+            name="Academy"
+            sequence="10"
+            parent="menu_module1" />
+        <menuitem id="menu_module1_configuration"
+            name="Configuration"
+            sequence="100"
+            parent="menu_module1" />    
+        <menuitem id="menu_module1_enrollments"
+            name="Enrollments and Qualifies"
+            sequence="99"
+            parent="menu_module1" />
+        
+        <menuitem id="menu_module1_student"
+            name="Students"
+            sequence="10"
+            parent="menu_module1_configuration"
+            action="action_student"/>
+        <menuitem id="menu_module1_enrollment"
+            name="Enrollments"
+            sequence="10"
+            parent="menu_module1_enrollments"
+            action="action_enrollment"/>
+         <menuitem id="menu_module1_result"
+            name="Results"
+            sequence="10"
+            parent="menu_module1_enrollments"
+            action="action_result"/>
+         <menuitem id="menu_module1_report_wizard"
+            name="Report Student WebKit"
+            sequence="10"
+            groups="module1_grp_expedients_manager"
+            parent="menu_module1_enrollments"
+            action="action_module1_report_wizard"/> 
+        <menuitem id="menu_module1_report_aeroo"
+            name="Report Student Aeroo"
+            sequence="10"
+            groups="module1_grp_expedients_manager"
+            parent="menu_module1_enrollments"
+            action="action_module1_report_wizard_aeroo"/> 
+		<menuitem id="menu_module1_course"
+            name="Courses"
+            sequence="10"
+            parent="menu_module1_configuration"
+            action="action_course"/>
+    	<menuitem id="menu_module1_task"
+            name="Tasks"
+            sequence="10"
+            parent="menu_module1_configuration"
+            action="action_task"/>
+		<menuitem id="menu_module1_teacher" 
+        	name="Teachers"
+        	action="action_partner" 
+        	parent="menu_module1_configuration" 
+        	sequence="10"/>   
+        <menuitem id="menu_module1_dashboard"
+        	  name="DashBoard" 
+              parent="menu_module1_enrollments" 
+              action="action_bd_module1" 
+              sequence="10"/>
+    </data>
+</openerp>

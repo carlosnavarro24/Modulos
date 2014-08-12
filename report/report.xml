@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+        <record id="Courses_Student_Report" model="ir.actions.report.xml">
+            <field name="report_type">webkit</field>             
+            <field name="report_name">test_1</field>
+            <field name="model">module1.student</field>
+            <field name="type">ir.actions.report.xml</field>
+            <field name="name">Courses by Student</field>
+            <field name="report_rml">module1/report/module1_courses_student_report.mako</field>
+            <field name="report_file">module1/report/module1_courses_student_report.mako</field>
+            <field name="webkit_header" ref="report_webkit.ir_header_webkit_basesample0"/>              
+        </record>    
+    </data>
+</openerp>

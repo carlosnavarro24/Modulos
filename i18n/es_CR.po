@@ -1,0 +1,539 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* module1
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-04 16:06+0000\n"
+"PO-Revision-Date: 2014-08-04 16:06+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: module1
+#: field:module1.student,result_ids:0
+msgid "Tasks by Student"
+msgstr "Tareas por Estudiante"
+
+#. module: module1
+#: field:module1.course,name:0
+#: field:module1.enrollment,course_id:0
+#: field:module1.result,course_id:0
+msgid "Course Name"
+msgstr "Nombre de Curso"
+
+#. module: module1
+#: view:module1.enrollment:0
+#: view:module1.result:0
+#: view:module1.task:0
+msgid "Group By..."
+msgstr "Agupado por..."
+
+#. module: module1
+#: view:module1.result:0
+msgid "Asigned"
+msgstr "Asignado"
+
+#. module: module1
+#: field:module1.task,code_task:0
+msgid "Task Code"
+msgstr "Codigo"
+
+#. module: module1
+#: code:addons/module1/wizard/module1_wizard_aeroo.py:81
+#, python-format
+msgid "There is no template defined for the selected format. Check if aeroo report exist."
+msgstr "There is no template defined for the selected format. Check if aeroo report exist."
+
+#. module: module1
+#: model:ir.actions.act_window,name:module1.action_module1_report_wizard
+#: model:ir.actions.report.xml,name:module1.Courses_Student_Report
+#: model:ir.actions.report.xml,name:module1.Courses_Student_Report_ods
+#: model:ir.actions.report.xml,name:module1.Courses_Student_Report_odt
+#: field:module1.student,enrollment_ids:0
+msgid "Courses by Student"
+msgstr "Cursos por estudiante"
+
+#. module: module1
+#: model:ir.actions.act_window,help:module1.action_course
+#: model:ir.actions.act_window,help:module1.action_enrollment
+#: model:ir.actions.act_window,help:module1.action_result
+#: model:ir.actions.act_window,help:module1.action_student
+#: model:ir.actions.act_window,help:module1.action_task
+msgid "<p class=\"oe_view_nocontent_create\">A nice arrow with some help for\n"
+"                    your first record</p>\n"
+"           	"
+msgstr "No existen registros."
+
+#. module: module1
+#: view:module1.course:0
+#: view:module1.student:0
+msgid "Qualifies"
+msgstr "Calificaciones"
+
+#. module: module1
+#: field:module1.task,assigned_date:0
+msgid "Assigned Date"
+msgstr "Fecha Asignada"
+
+#. module: module1
+#: view:module1.result:0
+msgid "Result Search"
+msgstr "Búsqueda de resultados"
+
+#. module: module1
+#: field:module1.result,task_id:0
+#: field:module1.task,name:0
+msgid "Task Name"
+msgstr "Nombre de Tarea"
+
+#. module: module1
+#: field:module1.student,course_ids:0
+#: field:module1.task,course_id:0
+msgid "Course Assigned"
+msgstr "Curso Asignado"
+
+#. module: module1
+#: model:ir.actions.act_window,name:module1.action_task
+#: view:module1.task:0
+msgid "Task"
+msgstr "Tarea"
+
+#. module: module1
+#: field:module1.course,enrollment_ids:0
+msgid "Students by Course"
+msgstr "Estudiantes por Curso"
+
+#. module: module1
+#: view:module1.course:0
+msgid "Course Search"
+msgstr "Busqueda de Cursos"
+
+#. module: module1
+#: view:module1.report_wizard_aeroo:0
+#: view:module1.report_wizard_webkit:0
+msgid "Reporteador"
+msgstr "Reporteador"
+
+#. module: module1
+#: model:ir.model,name:module1.model_module1_report_wizard_webkit
+msgid "module1.report_wizard_webkit"
+msgstr "module1.report_wizard_webkit"
+
+#. module: module1
+#: view:module1.student:0
+msgid "Student search"
+msgstr "Búsqueda de Estudiante"
+
+#. module: module1
+#: view:module1.result:0
+#: selection:module1.result,state:0
+msgid "Revised"
+msgstr "Revisado"
+
+#. module: module1
+#: model:ir.actions.act_window,name:module1.action_course
+#: view:module1.course:0
+#: view:module1.task:0
+msgid "Course"
+msgstr "Curso"
+
+#. module: module1
+#: help:module1.student,identification:0
+msgid "Number Identification"
+msgstr "Identificación"
+
+#. module: module1
+#: model:ir.model,name:module1.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: module1
+#: model:ir.actions.act_window,help:module1.action_partner
+msgid "Search Teacher"
+msgstr "Búsqueda de Profesores"
+
+#. module: module1
+#: model:res.groups,name:module1.module1_grp_expedients_manager
+msgid "Expedients Manager"
+msgstr "Control de Expedientes"
+
+#. module: module1
+#: view:module1.result:0
+msgid "Qualifies by tasks"
+msgstr "Calificaciones por tareas"
+
+#. module: module1
+#: view:module1.student:0
+msgid "Student search by Name"
+msgstr "Busqueda de Estudiantes por nombre"
+
+#. module: module1
+#: model:ir.model,name:module1.model_module1_result
+msgid "module1.result"
+msgstr "module1.result"
+
+#. module: module1
+#: model:ir.actions.act_window,name:module1.action_module1_report_wizard_aeroo
+msgid "Courses by Student 2"
+msgstr "Cursos por estudiante"
+
+#. module: module1
+#: field:module1.result,state:0
+msgid "State"
+msgstr "Estado"
+
+#. module: module1
+#: code:addons/module1/wizard/module1_wizard_aeroo.py:81
+#, python-format
+msgid "Error !"
+msgstr "Error"
+
+#. module: module1
+#: field:module1.enrollment,student_id:0
+#: field:module1.report_wizard_aeroo,student_id:0
+#: field:module1.report_wizard_webkit,student_id:0
+#: field:module1.result,student_id:0
+msgid "Student Name"
+msgstr "Nombre de Estudiante"
+
+#. module: module1
+#: field:module1.task,result_ids:0
+msgid "Result Assigned"
+msgstr "Resultado"
+
+#. module: module1
+#: model:ir.model,name:module1.model_module1_course
+msgid "module1.course"
+msgstr "module1.course"
+
+#. module: module1
+#: field:module1.result,qualify:0
+#: field:module1.task,qualify:0
+msgid "Qualify"
+msgstr "Calificación"
+
+#. module: module1
+#: model:ir.ui.menu,name:module1.menu_module1_configuration
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: module1
+#: model:ir.ui.menu,name:module1.menu_module1
+msgid "School"
+msgstr "Academia"
+
+#. module: module1
+#: sql_constraint:module1.result:0
+msgid "The same student for the same task"
+msgstr "Tarea ya está asignada a este estudiante"
+
+#. module: module1
+#: sql_constraint:module1.student:0
+msgid "Unique student_code"
+msgstr "Código de Estudiante debe ser único"
+
+#. module: module1
+#: model:res.groups,name:module1.module1_grp_expedients_view
+msgid "Expedients View"
+msgstr "Visor de Expedientes"
+
+#. module: module1
+#: view:module1.course:0
+msgid "Course search by Name"
+msgstr "Busqueda de Cursos"
+
+#. module: module1
+#: field:module1.course,teacher_id:0
+msgid "Assigned Teacher"
+msgstr "Profesor Asignado"
+
+#. module: module1
+#: model:ir.model,name:module1.model_module1_report_wizard_aeroo
+msgid "module1.report_wizard_aeroo"
+msgstr "module1.report_wizard_aeroo"
+
+#. module: module1
+#: field:module1.student,name:0
+msgid "Full Name"
+msgstr "Nombre Completo"
+
+#. module: module1
+#: model:ir.ui.menu,name:module1.menu_module1_report_wizard
+msgid "Report Student WebKit"
+msgstr "Calificaciones Webkit"
+
+#. module: module1
+#: view:module1.enrollment:0
+msgid "Delete"
+msgstr "Eliminar"
+
+#. module: module1
+#: model:ir.ui.menu,name:module1.menu_module1_task
+#: view:module1.result:0
+#: view:module1.task:0
+msgid "Tasks"
+msgstr "Tareas"
+
+#. module: module1
+#: field:module1.task,delivery_date:0
+msgid "Delivery Date Time"
+msgstr "Fecha/Hora de Entrega"
+
+#. module: module1
+#: model:ir.model,name:module1.model_module1_enrollment
+msgid "module1.enrollment"
+msgstr "module1.enrollment"
+
+#. module: module1
+#: field:module1.student,photo:0
+msgid "Photo"
+msgstr "Foto"
+
+#. module: module1
+#: field:module1.report_wizard_aeroo,out_format:0
+msgid "Print Format"
+msgstr "Imprimir"
+
+#. module: module1
+#: model:ir.actions.act_window,name:module1.action_result
+#: view:module1.result:0
+msgid "Result"
+msgstr "Resultado"
+
+#. module: module1
+#: view:module1.report_wizard_aeroo:0
+#: view:module1.report_wizard_webkit:0
+msgid "or"
+msgstr "o"
+
+#. module: module1
+#: model:ir.model,name:module1.model_module1_task
+msgid "module1.task"
+msgstr "module1.task"
+
+#. module: module1
+#: field:res.partner,course_ids:0
+msgid "Courses Asigned"
+msgstr "Cursos Asignados"
+
+#. module: module1
+#: field:module1.student,identification:0
+msgid "Identification"
+msgstr "Identificación"
+
+#. module: module1
+#: model:ir.ui.menu,name:module1.menu_module1_enrollments
+msgid "Enrollments and Qualifies"
+msgstr "Matriculas y calificaciones"
+
+#. module: module1
+#: view:module1.enrollment:0
+msgid "í"
+msgstr "í"
+
+#. module: module1
+#: model:ir.ui.menu,name:module1.menu_module1_student
+#: view:module1.enrollment:0
+#: view:module1.result:0
+msgid "Students"
+msgstr "Estudiantes"
+
+#. module: module1
+#: model:ir.ui.menu,name:module1.menu_module1_academy
+msgid "Academy"
+msgstr "Academia"
+
+#. module: module1
+#: field:module1.course,task_ids:0
+msgid "Task Assigned"
+msgstr "Tarea Asignada"
+
+#. module: module1
+#: model:ir.ui.menu,name:module1.menu_module1_enrollment
+msgid "Enrollments"
+msgstr "Matriculas"
+
+#. module: module1
+#: view:module1.course:0
+msgid "Courses search"
+msgstr "Busqueda de Cursos"
+
+#. module: module1
+#: view:module1.enrollment:0
+msgid "Student Name:"
+msgstr "Nombre de Estudiante:"
+
+#. module: module1
+#: field:module1.enrollment,qualify:0
+msgid "Course Qualify"
+msgstr "Calificación de Curso"
+
+#. module: module1
+#: model:ir.ui.menu,name:module1.menu_module1_course
+#: view:module1.enrollment:0
+#: view:module1.result:0
+#: view:module1.task:0
+#: view:res.partner:0
+msgid "Courses"
+msgstr "Cursos"
+
+#. module: module1
+#: view:module1.report_wizard_aeroo:0
+#: view:module1.report_wizard_webkit:0
+msgid "Go Report"
+msgstr "Ir a reporte"
+
+#. module: module1
+#: model:ir.ui.menu,name:module1.menu_module1_report_aeroo
+msgid "Report Student Aeroo"
+msgstr "Calificaciones Aeroo"
+
+#. module: module1
+#: sql_constraint:module1.task:0
+msgid "Unique code_task"
+msgstr "Codigo de tarea ya en uso"
+
+#. module: module1
+#: sql_constraint:module1.course:0
+msgid "Unique code_course"
+msgstr "Codigo de curso ya está en uso"
+
+#. module: module1
+#: field:module1.student,student_code:0
+msgid "Student Code"
+msgstr "Código de Estudiante"
+
+#. module: module1
+#: view:module1.enrollment:0
+msgid "Qualify:"
+msgstr "Calificación:"
+
+#. module: module1
+#: selection:module1.result,state:0
+msgid "Assigned"
+msgstr "Asignado"
+
+#. module: module1
+#: constraint:module1.result:0
+msgid "It has exceeded the delivery date"
+msgstr "Fecha de entrega expiró"
+
+#. module: module1
+#: view:module1.result:0
+#: selection:module1.result,state:0
+msgid "Done"
+msgstr "Listo"
+
+#. module: module1
+#: view:module1.enrollment:0
+msgid "Enrollment Search"
+msgstr "Búsqueda de Matrículas"
+
+#. module: module1
+#: view:module1.report_wizard_aeroo:0
+#: view:module1.report_wizard_webkit:0
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: module1
+#: model:ir.model,name:module1.model_module1_student
+msgid "module1.student"
+msgstr "module1.student"
+
+#. module: module1
+#: view:module1.task:0
+msgid "Task Search"
+msgstr "Task Search"
+
+#. module: module1
+#: model:ir.module.category,name:module1.module1_sec_categ
+msgid "Module1"
+msgstr "Module"
+
+#. module: module1
+#: field:module1.course,result_ids:0
+msgid "Tasks by Course"
+msgstr "Tareas por curso"
+
+#. module: module1
+#: field:module1.task,description:0
+msgid "Description"
+msgstr "Descripción"
+
+#. module: module1
+#: sql_constraint:module1.enrollment:0
+msgid "The same student for the same course"
+msgstr "Estudiante ya está asignado a este curso"
+
+#. module: module1
+#: model:ir.actions.act_window,name:module1.action_student
+#: view:module1.report_wizard_aeroo:0
+#: view:module1.report_wizard_webkit:0
+#: view:module1.student:0
+msgid "Student"
+msgstr "Estudiante"
+
+#. module: module1
+#: model:ir.actions.act_window,name:module1.action_partner
+#: view:res.partner:0
+#: field:res.partner,teacher:0
+msgid "Teacher"
+msgstr "Profesor"
+
+#. module: module1
+#: constraint:module1.result:0
+msgid "It has exceeded the maximum qualify"
+msgstr "Se ha excedido la calificación máxima"
+
+#. module: module1
+#: view:module1.course:0
+msgid "Tasks Assigned"
+msgstr "Tareas Asignadas"
+
+#. module: module1
+#: view:module1.student:0
+msgid "Student Search"
+msgstr "Busqueda de Estudiantes"
+
+#. module: module1
+#: model:ir.actions.act_window,name:module1.action_enrollment
+#: view:module1.enrollment:0
+msgid "Enrollment"
+msgstr "Matriculas"
+
+#. module: module1
+#: model:ir.ui.menu,name:module1.menu_module1_teacher
+msgid "Teachers"
+msgstr "Profesores"
+
+#. module: module1
+#: sql_constraint:module1.student:0
+msgid "Unique Identification"
+msgstr "La identificación ya está en uso"
+
+#. module: module1
+#: field:module1.course,code_course:0
+msgid "Course Code"
+msgstr "Codigo"
+
+#. module: module1
+#: field:module1.enrollment,color:0
+msgid "Color"
+msgstr "Color"
+
+#. module: module1
+#: model:ir.ui.menu,name:module1.menu_module1_result
+msgid "Results"
+msgstr "Resultados"
+
+#. module: module1
+#: constraint:module1.result:0
+msgid "Negatives results not allowed"
+msgstr "Resultado negativo no permitido"
+

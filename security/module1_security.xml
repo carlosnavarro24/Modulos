@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+    <data>
+        <record model="ir.module.category" id="module1_sec_categ">
+            <field name="name">Module1</field>
+        </record>
+        
+        <record model="res.groups" id="module1_grp_expedients_view">
+            <field name="name">Expedients View</field>
+            <field name="category_id" ref="module1_sec_categ" />
+        </record>
+        
+        <record model="res.groups" id="module1_grp_expedients_manager">
+            <field name="name">Expedients Manager</field>
+            <field name="category_id" ref="module1_sec_categ" />
+            <field name="implied_ids" eval="[(4, ref('module1_grp_expedients_view'))]" />
+        </record>
+        
+       <record model="ir.rule" id="module1_rule_result_assigned">
+            <field name="name">Only result Assigned</field>
+            <field name="model_id" ref="module1.model_module1_result" />
+            <field name="groups" eval="[(4, ref('module1_grp_expedients_manager'))]" /><!--Aplica a un grupo-->
+             <!--<field eval="True" name="global"/>--><!--Aplica en general-->
+            <!--<field name="perm_read" eval="0" />
+            <field name="perm_write" eval="1" />
+            <field name="perm_create" eval="0" />
+            <field name="perm_unlink" eval="1" />-->
+            <field name="domain_force">[('state','=','assigned')]</field>
+		</record>
+
+    </data>
+</openerp>

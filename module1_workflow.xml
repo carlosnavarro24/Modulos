@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+    <data>
+        <record model="workflow" id="module1_result_wkf">
+            <field name="name">module1_result_workflow</field>
+            <field name="osv">module1.result</field>
+            <field name="on_create" eval="True" />
+        </record>
+        
+      	<record model="workflow.activity" id="module1_result_wkf_assigned">
+            <field name="name">assigned</field>
+            <field name="wkf_id" ref="module1_result_wkf" />
+            <field name="kind">function</field>
+            <field name="flow_start" eval="True" />
+            <field name="action">action_assigned()</field>
+        </record>
+        
+      <record model="workflow.activity" id="module1_result_wkf_revised">
+            <field name="name">revised</field>
+            <field name="wkf_id" ref="module1_result_wkf" />
+            <field name="kind">function</field>
+            <field name="action">action_revised()</field>
+        </record>
+        
+        <record model="workflow.activity" id="module1_result_wkf_done">
+            <field name="name">done</field>
+            <field name="wkf_id" ref="module1_result_wkf" />
+            <field name="kind">function</field>
+            <field name="action">action_done()</field>
+        </record>
+        
+        <record model="workflow.transition" id="module1_result_wkf_assigned2revised">
+            <field name="act_from" ref="module1_result_wkf_assigned" />
+            <field name="act_to" ref="module1_result_wkf_revised" />
+            <field name="signal">signal_revised</field>
+            <field name="condition">True</field>
+        </record>
+        
+        <record model="workflow.transition" id="module1_result_wkf_revised2done">
+            <field name="act_from" ref="module1_result_wkf_revised" />
+            <field name="act_to" ref="module1_result_wkf_done" />
+            <field name="signal">signal_done</field>
+            <field name="condition">qualify &gt;= 0 </field>
+        </record>
+        
+        <record model="workflow.transition" id="module1_result_wkf_revised2assigned">
+            <field name="act_from" ref="module1_result_wkf_revised" />
+            <field name="act_to" ref="module1_result_wkf_assigned" />
+            <field name="signal">signal_assigned</field>
+            <field name="condition">True</field>
+        </record>
+        
+        <record model="workflow.transition" id="module1_result_wkf_done2revised">
+            <field name="act_from" ref="module1_result_wkf_done" />
+            <field name="act_to" ref="module1_result_wkf_revised" />
+            <field name="signal">signal_revised</field>
+            <field name="condition">True</field>
+        </record>-->
+    </data>
+</openerp>

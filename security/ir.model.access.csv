@@ -1,0 +1,8 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+module1_student_exp_view,module1_student_exp_view,module1.model_module1_student,module1_grp_expedients_view,1,0,0,0
+module1_student_exp_mng,module1_student_exp_mng,module1.model_module1_student,module1_grp_expedients_manager,1,1,1,1
+module1_course_exp_mng,module1_course_exp_mng,module1.model_module1_course,module1_grp_expedients_manager,1,1,1,1
+module1_enrollment_exp_mng,module1_enrollment_exp_mng,module1.model_module1_enrollment,module1_grp_expedients_manager,1,1,1,1
+module1_result_exp_mng,module1_result_exp_mng,module1.model_module1_result,module1_grp_expedients_manager,1,1,1,1
+module1_task_exp_mng,module1_task_exp_mng,module1.model_module1_task,module1_grp_expedients_manager,1,1,1,1
+module1_teache_exp_mng,module1_teache_exp_mng,base.model_res_partner,module1_grp_expedients_manager,1,1,1,0

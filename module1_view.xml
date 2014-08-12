@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+	<data>
+		<!--Sequence Student Code-->
+		<record model="ir.sequence.type" id="seq_type_module1_student">
+        	<field name="name">Student Code</field>
+        	<field name="code">module1.student</field>
+    	</record>
+    	<record model="ir.sequence" id="seq_module1_student">
+        	<field name="name">Student Code</field>
+        	<field name="code">module1.student</field>
+        	<field name="prefix">st</field>
+        	<field name="padding">6</field>
+        	<field name="next_number">1</field>
+        <!-- in case you need to attach it to a specific company <field name="company_id" ref="xx"/> -->
+		</record>
+		<!--Tree View Student-->
+		<record model="ir.ui.view" id="view_module1_student_tree">
+            <field name="name">view.module1.student.tree</field>
+            <field name="model">module1.student</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree string="Student">
+                	<field name="student_code" />
+                    <field name="identification" />
+                    <field name="name" />
+    	     		<field name="photo" />
+                </tree>    
+            </field>
+        </record>
+        
+      	<!--Form View Student-->
+        <record model="ir.ui.view" id="view_module1_student_form">
+            <field name="name">view.module1.student.form</field>
+            <field name="model">module1.student</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Student" version="7.0">
+                        <sheet>
+          					<group>
+								<field name="student_code" />
+								<field name="identification"/>
+                    			<field name="name"/>
+                    			<field name="photo" widget="image" class="oe_left oe_avatar"/>
+         					</group>
+         					<notebook colspan="4">
+	                            <page string="Qualifies">
+                                	<field name="enrollment_ids" />		
+                                	<field name="result_ids"/>		
+                            	</page>
+                        	</notebook>
+         				</sheet>
+                </form>
+            </field>
+        </record>
+        <!--Search View Student like name-->
+        <record model="ir.ui.view" id="view_module1_student_search">
+            <field name="name">view.module1.student.search</field>
+            <field name="model">module1.student</field>
+            <field name="arch" type="xml">
+                <search string="Student search by Name">
+                    <filter string="Student Search"
+                        icon="terp-partner"
+                        name="Students"
+                        help="Student search" />
+                    <field name="name" domain="[(name,'ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+		 
+         <!--Tree View Course-->
+		<record model="ir.ui.view" id="view_module1_course_tree">
+            <field name="name">view.module1.course.tree</field>
+            <field name="model">module1.course</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree string="Course">
+                    <field name="code_course" />
+                    <field name="name" />
+                    <field name="teacher_id"/>
+    	        </tree>    
+            </field>
+        </record>
+        
+      	<!--Form View Course-->
+        <record model="ir.ui.view" id="view_module1_course_form">
+            <field name="name">view.module1.course.form</field>
+            <field name="model">module1.course</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Course" version="7.0">
+                        <sheet>
+          					<group>
+								<field name="code_course"/>
+                    			<field name="name"  />
+                    		</group>
+                    		<group>
+								<field name="teacher_id"/>
+                    		</group>
+                    		<notebook colspan="4">
+	                            <page string="Tasks Assigned">
+                                	<field name="task_ids" widget="many2many_tags" placeholder="e.g. Exam 1"/>		
+                                </page>
+	                            <page string="Qualifies">
+                                	<field name="enrollment_ids"/>		
+                                	<field name="result_ids"/>		
+                                </page>
+                        	</notebook>
+         					
+         				</sheet>
+                </form>
+            </field>
+        </record>
+        <!--Search View course like name-->
+        <record model="ir.ui.view" id="view_module1_course_search">
+            <field name="name">view.module1.course.search</field>
+            <field name="model">module1.course</field>
+            <field name="arch" type="xml">
+                <search string="Course search by Name">
+                    <filter string="Course Search"
+                        icon="terp-partner"
+                        name="Courses"
+                        help="Courses search" />
+                    <field name="name" domain="[(name,'ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+          <!--Tree View Task-->
+		<record model="ir.ui.view" id="view_module1_task_tree">
+            <field name="name">view.module1.task.tree</field>
+            <field name="model">module1.task</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree string="Task">
+                    <field name="code_task" />
+                  	<field name="name" />
+                  	<field name="description" />
+                  	<field name="assigned_date" />
+                  	<field name="delivery_date" />
+                  	<field name="qualify" />
+                  	<field name="course_id" />
+    	        </tree>    
+            </field>
+        </record>
+        <!--Form View Task-->
+        <record model="ir.ui.view" id="view_module1_task_form">
+            <field name="name">view.module1.task.form</field>
+            <field name="model">module1.task</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Course" version="7.0">
+                        <sheet>
+          					<group>
+			                    <field name="code_task" />
+			                  	<field name="name" />
+			                  	<field name="description" />
+			                  	<field name="assigned_date" />
+			                  	<field name="delivery_date" />
+			                  	<field name="qualify" />
+			                  	<field name="course_id" />
+                    		</group>
+                    		                    
+
+         				</sheet>
+                </form>
+            </field>
+        </record>
+        <!--Search View Task-->
+        <record model="ir.ui.view" id="view_module1_task_search">
+            <field name="name">view.module1.task.search</field>
+            <field name="model">module1.task</field>
+            <field name="arch" type="xml">
+            	<search string="Result Search">	
+	                <group expand="1" string="Group By...">
+	   					<filter string="Courses" icon="terp-project" domain="[]" context="{'group_by':'course_id'}"/>
+					</group>
+				</search>
+            </field>
+        </record>
+        <!--Calendar View Task-->
+        <record model="ir.ui.view" id="view_module1_task_calendar">
+        	<field name="name">view.module1.task.calendar</field>
+        	<field name="model">module1.task</field>
+        	<field name="priority" eval="16"/>
+        	<field name="arch" type="xml">
+        		<calendar string="Tasks" color="code_task" date_start="assigned_date" date_stop="delivery_date">
+        			<field name="name"/>
+        			<field name="description"/>
+        			<field name="qualify"/>
+        			<field name="course_id"/>
+        			<field name="result_ids"/>
+        		</calendar>
+        	</field>
+        </record>
+        <!--Search View task -->
+        <record model="ir.ui.view" id="view_module1_task_search">
+            <field name="name">view.module1.task.search</field>
+            <field name="model">module1.task</field>
+            <field name="arch" type="xml">
+            	<search string="Task Search">	
+	                <group expand="1" string="Group By...">
+	   					<filter string="Courses" name="courses" icon="terp-project" domain="[]" context="{'group_by':'course_id'}"/>
+					</group>
+				</search>
+            </field>
+        </record>
+         <!--Gantt View Task-->
+        <record model="ir.ui.view" id="view_module1_task_gantt">
+            <field name="name">view.module1.task.gantt</field>
+            <field name="model">module1.task</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <gantt string="Tasks" mode="week" color="code_task" date_start="assigned_date" date_stop="delivery_date" >
+                    <level object="module1.course" link="course_id">
+                    	<field name="name"/>
+                    </level>
+                </gantt>
+            </field>
+        </record>       
+		 <!--Form View Enrollment-->
+        <record model="ir.ui.view" id="view_module1_enrollment_form">
+            <field name="name">view.module1.enrollment.form</field>
+            <field name="model">module1.enrollment</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Enrollment" version="7.0">
+                        <sheet>
+          					<group>
+			                   	<field name="course_id" />
+			                  	<field name="student_id"/>                  	
+                    			<field name="qualify" />
+                    		</group>
+         				</sheet>
+                </form>
+            </field>
+        </record>
+        <!--Tree View Enrollment-->
+		<record model="ir.ui.view" id="view_module1_enrollment_tree">
+            <field name="name">view.module1.enrollment.tree</field>
+            <field name="model">module1.enrollment</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree string="Enrollment">
+                	  <field name="course_id" />
+ 			          <field name="student_id" />
+ 			          <field name="qualify" />
+			    </tree>    
+            </field>
+        </record>
+                <!--Search View enrollmet -->
+        <record model="ir.ui.view" id="view_module1_enrollment_search">
+            <field name="name">view.module1.enrollment.search</field>
+            <field name="model">module1.enrollment</field>
+            <field name="arch" type="xml">
+            	<search string="Enrollment Search">	
+	                <group expand="1" string="Group By...">
+	   					<filter string="Courses" name="courses" icon="terp-project" domain="[]" context="{'group_by':'course_id'}"/>
+	   					<filter string="Students" name="students" icon="terp-project" domain="[]" context="{'group_by':'student_id'}"/>
+					</group>
+				</search>
+            </field>
+        </record>
+		 <!--Kanban Enrollment-->
+		<record model="ir.ui.view" id="view_module1_enrollment_kanban">
+            <field name="name">view.module1.enrollment.kanban</field>
+            <field name="model">module1.enrollment</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <kanban default_group_by="course_id" >
+                    <field name="color" />
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)}
+                                oe_kanban_global_click_edit oe_semantic_html_override
+                                oe_kanban_card #{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}">
+                                <div class="oe_dropdown_kanban">
+                                    <div class="oe_dropdown_toggle">
+                                        <span class="oe_e">í</span>
+                                        <ul class="oe_dropdown_menu">
+                                            <li><a type="delete">Delete</a></li>
+                                            <li><ul class="oe_kanban_colorpicker" /></li>
+                                        </ul>
+                                    </div>
+                                    <div class="oe_clear"></div>
+                                </div>
+                                <div t-attf-class="oe_kanban_content">
+                                    Student Name: <field name="student_id"></field><br />
+                                    Qualify: <field name="qualify"></field>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+		</record> 
+
+            
+             
+        
+         		<!--Form View Result-->
+        <record model="ir.ui.view" id="view_module1_result_form">
+            <field name="name">view.module1.result.form</field>
+            <field name="model">module1.result</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Result" version="7.0">
+                		<header>
+                        	<button name="signal_assigned" type="workflow" string="Asigned" states="revised" />
+                        	<button name="signal_revised" type="workflow" string="Revised" states="assigned,done" class="oe_highlight" />
+                        	<button name="signal_done" type="workflow" string="Done" states="revised" class="oe_highlight" />
+                        	<field name="state" widget="statusbar" />
+                    	</header>
+                        <sheet>
+          					<group>
+          						<field name="course_id" on_change="onchange_get_domain_course(course_id)"/>
+          						<field name="student_id"/>
+          						<field name="task_id"  />
+			                  	<field name="qualify" attrs="{'readonly':[('state','in',['assigned'])]}" />
+			                </group>
+                        </sheet>
+                </form>
+            </field>
+        </record>
+        <!--Tree View Result-->
+		<record model="ir.ui.view" id="view_module1_result_tree">
+            <field name="name">view.module1.result.tree</field>
+            <field name="model">module1.result</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree string="Result">
+                	   <field name="course_id"/>
+                	   <field name="student_id" />
+			           <field name="task_id" />
+			           <field name="qualify" />
+			    </tree>    
+            </field>
+        </record>
+		                <!--Search View Result -->
+        <record model="ir.ui.view" id="view_module1_result_search">
+            <field name="name">view.module1.result.search</field>
+            <field name="model">module1.result</field>
+            <field name="arch" type="xml">
+            	<search string="Result Search">	
+	                <group expand="1" string="Group By...">
+	   					<filter string="Courses" name="courses" icon="terp-project" domain="[]" context="{'group_by':'course_id'}"/>
+	   					<filter string="Tasks" name="tasks" icon="terp-project" domain="[]" context="{'group_by':'task_id'}"/>
+	   					<filter string="Students" name="students" icon="terp-project" domain="[]" context="{'group_by':'student_id'}"/>
+					</group>
+				</search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_module1_result_graph">
+            <field name="name">view.module1.result.graph</field>
+            <field name="model">module1.result</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <graph string="Qualifies by tasks" type="bar" >
+                    <field name="student_id" />
+                    <field name="qualify" operator="+" />
+                    <field name="course_id" />
+                </graph>
+            </field>
+        </record>
+       
+         <!-- Teachers-->
+        <record id="view_module1_partner" model="ir.ui.view">
+            <field name="name">view.module1.partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page/group/group/field[@name='supplier']" position="after">
+                    <field name="teacher"/>
+                </xpath>
+                <notebook position="inside">
+                    <page string="Courses">
+                        <field name="course_ids"/>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+        <!--Search View Teacher -->
+        <record model="ir.ui.view" id="view_module1_partner_search">
+            <field name="name">view.module1.partner.search</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+            		<xpath expr="//filter[@name='supplier']" position="after">
+   						<filter string="Teacher" name="teacher" icon="terp-partner" domain="[('teacher','=','1')]" />
+					</xpath>																
+            </field>
+        </record>
+
+		<record  model="ir.actions.act_window" id="action_partner">
+            <field name="name">Teacher</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="context">{"search_default_teacher": 1}</field>
+            <field name="search_view_id" ref="view_module1_partner_search" />
+            <field name="help">Search Teacher</field>
+        </record>
+        <!--Action Student-->
+		<record model="ir.actions.act_window" id="action_student">
+			<field name="name">Student</field>
+			<field name="res_model">module1.student</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">A nice arrow with some help for
+                    your first record</p>
+           	</field>
+        </record>
+        
+
+              
+      	
+       
+		
+		 <!--Action Course-->
+		<record model="ir.actions.act_window" id="action_course">
+			<field name="name">Course</field>
+			<field name="res_model">module1.course</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">A nice arrow with some help for
+                    your first record</p>
+           	</field>
+        </record>
+        
+                <!--Action task-->
+		<record model="ir.actions.act_window" id="action_task">
+			<field name="name">Task</field>
+			<field name="res_model">module1.task</field>
+			<field name="context">{'search_default_courses': 1}</field>
+			<field name="view_mode">tree,form,calendar,gantt</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">A nice arrow with some help for
+                    your first record</p>
+           	</field>
+        </record>   		
+    	 <!--Action Enrollment-->
+		<record model="ir.actions.act_window" id="action_enrollment">
+			<field name="name">Enrollment</field>
+			<field name="res_model">module1.enrollment</field>
+			<field name="context">{'search_default_courses': 1}</field>
+			<field name="view_mode">tree,form,kanban</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">A nice arrow with some help for
+                    your first record</p>
+           	</field>
+        </record>
+
+                
+		<!--Action Result-->
+		<record model="ir.actions.act_window" id="action_result">
+			<field name="name">Result</field>
+			<field name="res_model">module1.result</field>
+			<field name="view_mode">tree,form,graph</field>
+			<field name="context">{'search_default_courses': 1, 'search_default_tasks': 1,'search_default_students': 1}</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">A nice arrow with some help for
+                    your first record</p>
+           	</field>
+        </record>
+
+
+	</data>
+</openerp>

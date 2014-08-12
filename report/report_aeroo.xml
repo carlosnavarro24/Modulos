@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+         
+         <record id="Courses_Student_Report_odt" model="ir.actions.report.xml">
+            <field name="name">Courses by Student</field>
+            <field name="type">ir.actions.report.xml</field>
+            <field name="model">module1.student</field>
+            <field name="report_name">test2_odt</field>
+            <field name="report_type">aeroo</field>
+            <field name="in_format">oo-odt</field>
+            <field name="out_format">1</field>
+            <field name="parser_loc">module1/report/module1_courses_student_aeroo.py</field>
+            <field name="report_rml">module1/report/test2.odt</field>
+            <field name="parser_state">loc</field>
+            <field name="tml_source">file</field>
+         </record>
+         <record id="Courses_Student_Report_ods" model="ir.actions.report.xml">
+            <field name="name">Courses by Student</field>
+            <field name="type">ir.actions.report.xml</field>
+            <field name="model">module1.student</field>
+            <field name="report_name">test2_ods</field>
+            <field name="report_type">aeroo</field>
+            <field name="in_format">oo-ods</field>
+            <field name="out_format">2</field>
+            <field name="parser_loc">module1/report/module1_courses_student_aeroo.py</field>
+            <field name="report_rml">module1/report/test2.ods</field>
+            <field name="parser_state">loc</field>
+            <field name="tml_source">file</field>
+         </record>
+    </data>
+</openerp>

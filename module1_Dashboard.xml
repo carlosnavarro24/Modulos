@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+    <record id="bd_module1_form" model="ir.ui.view">
+        <field name="name">bd.module1.form</field>
+        <field name="model">board.board</field>
+        <field name="arch" type="xml">
+            <form string="Module1 Dashboard"  version="7.0">
+                <board style="2-1">
+                    <column/>
+                    <column/>
+                </board>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_bd_module1" model="ir.actions.act_window">
+        <field name="name">Module1</field>
+        <field name="res_model">board.board</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="usage">menu</field>
+        <field name="view_id" ref="bd_module1_form"/>
+            <field name="help" type="html">
+              <div class="oe_empty_custom_dashboard">
+                  <p>
+                    <b>Module1 dashboard is empty.</b>
+                  </p><p>
+                    To add your first report into this dashboard, go to any
+                    menu, switch to list or graph view, and click <i>'Add to
+                    Dashboard'</i> in the extended search options.
+                  </p><p>
+                    You can filter and group data before inserting into the
+                    dashboard using the search options.
+                  </p>
+              </div>
+            </field>
+    </record>
+
+
+</data>
+</openerp>
